@@ -291,6 +291,12 @@ ENV JIRA_HOSTNAME       your.jira.domain.com
 ENV PORT                8000
 ```
 
+### Helm Chart for Kubernetes deployment
+
+There is an experimental Helm Chart deploy the Snyk broker into Kubernetes. This is configured for the Gitlab Integration, although it should be straightforward to use for other SCM Integrations.
+
+https://github.com/OpenSource-THG/helm-chart-snyk-broker
+
 ### Monitoring
 
 #### Healthcheck
