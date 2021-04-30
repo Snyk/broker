@@ -8,9 +8,11 @@ describe('replacePartialChunk', () => {
   };
 
   it('Replaces string completely in chunk', () => {
-    const chunk = 'Replace the "http://replac.ed/get/some/artifact" url please.';
+    const chunk =
+      'Replace the "http://replac.ed/get/some/artifact" url please.';
     const prevPartial = null;
-    const expectedChunk = 'Replace the "broker.com/broker/a-tok-en/get/some/artifact" url please.';
+    const expectedChunk =
+      'Replace the "broker.com/broker/a-tok-en/get/some/artifact" url please.';
 
     expect(replaceUrlPartialChunk(chunk, prevPartial, config)).toEqual({
       newChunk: expectedChunk,
@@ -32,7 +34,8 @@ describe('replacePartialChunk', () => {
   it('Replaces partial at start of chunk if matched with prevPartial', () => {
     const chunk = 'c.ed/get/some/artifact" url please.';
     const prevPartial = 'http://repla';
-    const expectedChunk = 'broker.com/broker/a-tok-en/get/some/artifact" url please.';
+    const expectedChunk =
+      'broker.com/broker/a-tok-en/get/some/artifact" url please.';
 
     expect(replaceUrlPartialChunk(chunk, prevPartial, config)).toEqual({
       newChunk: expectedChunk,
@@ -50,5 +53,4 @@ describe('replacePartialChunk', () => {
       partial: undefined,
     });
   });
-
 });
