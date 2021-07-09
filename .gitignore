@@ -2,6 +2,7 @@
 .env
 .nyc_output
 .vscode
+.idea
 coverage
 /test/fixtures/certs/tmp
 accept.json
