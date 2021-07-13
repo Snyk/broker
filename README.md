@@ -1,4 +1,4 @@
-[![Snyk logo](https://snyk.io/style/asset/logo/snyk-print.svg)](https://snyk.io) 
+[![Snyk logo](https://snyk.io/style/asset/logo/snyk-print.svg)](https://snyk.io)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/snyk/broker/badge.svg?style=flat-square)](https://snyk.io/test/github/snyk/broker)
 
@@ -37,6 +37,14 @@ docker run --restart=always \
            -e PORT=8000 \
            -e BROKER_CLIENT_URL=http://my.broker.client:8000 \
        snyk/broker:github-com
+```
+
+Proxy configuration, see [Configure Docker to use a proxy server](https://docs.docker.com/network/proxy/)
+
+```Proxy
+           -e HTTP_PROXY=http://my.proxy.address:8080
+           -e HTTPS_PROXY=http://my.proxy.address:8080
+           -e NO_PROXY=*.test.example.com,.example2.com,127.0.0.0/8
 ```
 
 #### Derived docker image
